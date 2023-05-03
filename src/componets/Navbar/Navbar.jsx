@@ -1,11 +1,22 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../provider/AuthProvider';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const { user  , logOut} = useContext(AuthContext)
+console.log(user)
+
+    const handleLogOut = ()=>{
+        logOut()
+        .then()
+        .catch(error => console.log(error.message))
+    }
+    
+   
 
     return (
-        <div className='my-container '>
+        <div className='my-container'>
         <div className='relative bg-slate-400 flex items-center justify-between'>
             <Link
                 to='/'
@@ -45,8 +56,18 @@ const Navbar = () => {
                 <li>
                 </li>
             </ul>
-            <div>                 
-                  <button style={{ background: 'linear-gradient(90deg, #7E90FE 0%, #9873FF 100%)' }} className=' hidden border-none btn lg:block  text-white text-base'>Login</button>
+            <div className="flex items-center">        
+                {
+                    user && <img title={user.displayName} className="w-[30px] h-[30px] rounded-full mr-4" src={user.photoURL} alt="" />
+                }         
+            {
+                                user ?
+                                    <button onClick={handleLogOut} style={{ background: 'linear-gradient(90deg, #7E90FE 0%, #9873FF 100%)' }} className=' hidden border-none btn lg:block  text-white text-base'>Logout</button>
+                                    :
+
+                                    <Link to="login">  <button style={{ background: 'linear-gradient(90deg, #7E90FE 0%, #9873FF 100%)' }} className=' hidden border-none btn lg:block  text-white text-base'>Login</button></Link>
+
+                            }
             </div>
             <div className='lg:hidden'>
                 <button
@@ -136,7 +157,23 @@ const Navbar = () => {
 
                                 </ul>
                                 <div>
-                                    <button style={{ background: 'linear-gradient(90deg, #7E90FE 0%, #9873FF 100%)' }} className='  text-white border-none text-base btn'>Login</button>
+                              
+                                
+                            
+
+
+
+
+
+                            {
+                                user ?
+                                    <button onClick={handleLogOut} style={{ background: 'linear-gradient(90deg, #7E90FE 0%, #9873FF 100%)' }} className=' hidden border-none btn lg:block  text-white text-base'>Logout</button>
+                                    :
+
+                                    <Link to="login">  <button style={{ background: 'linear-gradient(90deg, #7E90FE 0%, #9873FF 100%)' }} className=' hidden border-none btn lg:block  text-white text-base'>Login</button></Link>
+
+                            }
+
                                 </div>
                             </nav>
                         </div>

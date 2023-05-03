@@ -5,18 +5,18 @@ const Chef = () => {
     const [chefs, setChefs] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/recipes')
+        fetch('https://assignment10-server-site-showrab15.vercel.app/recipes')
         .then(res => res.json())
         .then(data => {
-            setChefs(data.chefs)
-            console.log(data)
+            setChefs(data)
+            // console.log(data);
         })
         
     },[])
     return (
-        <div className="mt-8">
-            <h1 className="text4xl font-bold text-center ">Know About Our Chefs</h1>
-            <div className="grid  md:grid-cols-2 lg:grid-cols-2 justify-center  my-container gap-10 ">
+        <div className="my-container">
+            <h1 className="text-4xl font-bold text-center ">Know About Our Chefs</h1>
+            <div className="grid  md:grid-cols-2 lg:grid-cols-2 justify-center gap-10 ">
             {
                 chefs.map(chef => <ChefCard 
                 key={chef.id}
