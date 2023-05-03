@@ -1,35 +1,27 @@
 import React from 'react';
-
+import Pdf from '../Pdf/Pdf';
 const Blog = () => {
   return (
     <div>
       <section class="mt-8 mb-8 w-[50%] mx-auto">
         <h1 class="text-3xl font-bold text-center mb-8 underline">Few Question Answer</h1>
-        <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-orange-400 rounded-box ">
-          <div class="collapse-title text-xl font-medium">When Should you use context API</div>
-          <div class="collapse-content bg-rose-300">
-            <p>Context is primarily used when some data needs to be accessible by many components at different nesting levels. Apply it sparingly because it makes component reuse more difficult. If you only want to avoid passing some props through many levels, component composition is often a simpler solution than context.</p>
-          </div>
-        </div>
-        <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-yellow-400	rounded-box ">
-          <div class="collapse-title text-xl font-medium">What is custom hook?</div>
-          <div class="collapse-content bg-lime-200	">
-            <p>Custom React JS hooks are reusable functions that a React JS software developer can use to add special and unique functionality to the React applications. Usually, if there is a requirement to add a feature, one can install a third-party library and solve the problem</p>
-          </div>
-        </div>
-        <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-red-400 rounded-box ">
-          <div class="collapse-title text-xl font-medium">What is useRef? Why we use this ?</div>
-          <div class="collapse-content bg-red-50">
-            <p>useRef(initialValue) is a built-in React hook that accepts one argument as the initial value and returns a reference (aka ref). A reference is an object having a special property current </p>
-          </div>
-        </div>
-        <div tabindex="0" class="collapse collapse-arrow border border-base-300  rounded-box ">
-          <div class="collapse-title text-xl font-medium">  What is useMemo? Why we use this ?</div>
-          <div class="collapse-content bg-orange-200">
-            <p>useMemo is a React hook that allows us to memoize expensive computations and avoid unnecessary re-renders of components. It takes a function and an array of dependencies as arguments, and returns the previously computed value if the dependencies haven't changed. The main use case for useMemo is to improve the performance of our application by reducing the amount of work that needs to be done during rendering.</p>
-          </div>
-        </div>
+     <h1 className='text-2xl font-bold '>  1. Tell us the differences between uncontrolled and controlled components</h1>
+     <p className="font-semibold">Ans: In React, controlled components refer to components that have their state and behavior controlled by the parent component. These components rely on props passed down from the parent component to update their state and behavior. Uncontrolled components refer to components that manage their own state internally</p>
+     <h1 className='text-2xl font-bold '>  2. How to validate React props using PropTypes
+</h1>
+     <p className="font-semibold"> Ans:
+ Some Steps to validate React props using PropTypes:
+<br />
+Import the PropTypes library in your component using import PropTypes from 'prop-types'; Then Define the expected data types for your props using the propTypes object inside your component. Specify the data type for each prop using PropTypes, such as PropTypes.string, PropTypes.number, PropTypes.bool, etc. Must be Assign the propTypes object to your component using the MyComponent.propTypes syntax.</p>
+
+     <h1 className='text-2xl font-bold '>  3. Tell us the difference between nodejs and express js?</h1>
+     <p className="font-semibold">Ans: js web application framework that provides a robust set of features for web and mobile applications. In other words, NodeJS is the package, which provides the JavaScript run-time environment, whereas Express is a framework that sits on top of NodeJS and helps us to handle requests and responses.</p>
+
+     <h1 className='text-2xl font-bold '>   4. What is a custom hook, and why will you create a custom hook?
+</h1>
+     <p className="font-semibold">Ans: Custom hooks allow you to extract and reuse stateful logic from components, reducing duplication and keeping your code more modular and easier to maintain.Custom hooks are created by defining a function that uses the built-in React hooks like useState, useEffect, useContext, etc., and returns some state or behavior that can be used by components.</p>
       </section>
+<Pdf></Pdf>
     </div>
   );
 };

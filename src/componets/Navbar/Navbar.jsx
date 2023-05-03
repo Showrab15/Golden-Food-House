@@ -21,12 +21,12 @@ const Navbar = () => {
         <div className='relative bg-slate-400 flex items-center justify-between'>
             <Link
                 to='/'
-                aria-label='Rannaghor'
-                title='Rannaghor'
+                aria-label='Golden Rice House'
+                title='Golden Rice House'
                 className='inline-flex items-center'
             >
                 <div className='flex items-center justify-center '>
-                    <h1 className="text-2xl font-bold">Rannaghor</h1>
+                    <h1 className="text-2xl font-bold">Golden Rice House</h1>
                 </div>
 
             </Link>
@@ -97,12 +97,12 @@ const Navbar = () => {
                         <div className='p-5 bg-white border rounded shadow-sm'>
                             <div className='flex items-center justify-between mb-4'>
 
-                                <h1 className="text-2xl font-bold">Rannaghor</h1>
+                                <h1 className="text-2xl font-bold">Golden Rice House</h1>
                                 <div>
                                     <Link
                                         to='/'
-                                        aria-label='Rannaghor'
-                                        title='Rannaghor'
+                                        aria-label='Golden Rice House'
+                                        title='Golden Rice House'
                                         className='inline-flex items-center'
                                     >
                                         <div className='flex items-center justify-center '>

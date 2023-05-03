@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FaHeart, FaUtensils, FaMedal } from "react-icons/fa";
 import chefIcon from '../../assets/chefIcon.png'
 import recipeIcon from '../../assets/recipeicon.png'
+import { AuthContext } from '../../provider/AuthProvider';
 const ChefCard = ({ chef }) => {
+   
     // console.log(chef);
     const { chef_picture_url, chef_name,id, experience_years, likes, number_of_recipes ,recipes} = chef
     return (

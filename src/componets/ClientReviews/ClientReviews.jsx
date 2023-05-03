@@ -28,10 +28,10 @@ const ClientReviews = () => {
          <i className="text-white  font-semibold text-1xl">The dishes prepared by the chef were bursting with flavor and expertly presented excellent service.  </i>
                   <p className="font-bold text-2xl mt-4"> - John Doe</p>
 
-         <div className="flex justify-center w-full py-2 gap-2">
-  <a href="#feedback1" className=" text-8xl font-extrabold text-yellow-600	 hover:font-bold ">.</a> 
-  <a href="#feedback2" className=" text-8xl font-extrabold text-yellow-600	 hover:font-bold ">.</a> 
-  <a href="#feedback3" className=" text-8xl font-extrabold text-yellow-600	 hover:font-bold ">.</a> 
+         <div style={{paddingBottom: '100px'}} className="flex justify-center  w-full  gap-2">
+  <a href="#feedback1" className=" text-6xl font-extrabold text-yellow-600	 hover:font-bold ">.</a> 
+  <a href="#feedback2" className=" text-6xl font-extrabold text-yellow-600	 hover:font-bold ">.</a> 
+  <a href="#feedback3" className=" text-6xl font-extrabold text-yellow-600	 hover:font-bold ">.</a> 
   
 </div>
             </div>
@@ -42,12 +42,12 @@ const ClientReviews = () => {
             <img src={clientFood2} alt="Restaurant background" className=" object-cover banner w-full  h-full rounded-lg " />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
 <img src={client2} className="w-[60px] h-[60px] mx-auto rounded-full" alt="" />       
-         <i className=" text-white font-semibold text-1xl">Sed posuere consectetur est at lobortis.Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus </i>
-         <p className="font-bold text-2xl mt-4"> - Alexander Mark</p>
-         <div className="flex justify-center w-full   gap-2">
-  <a href="#feedback1" className=" text-8xl font-extrabold text-yellow-600	 hover:font-bold ">.</a> 
-  <a href="#feedback2" className=" text-8xl font-extrabold text-yellow-600	 hover:font-bold ">.</a> 
-  <a href="#feedback3" className=" text-8xl font-extrabold text-yellow-600	 hover:font-bold ">.</a> 
+         <i className=" text-white font-semibold text-1xl">Sed posuere consectetur est at lobortis.Pellentesque ornare sem lacinia quam venenatis vestibulum.</i>
+         <p className="font-bold text-2xl mt-4 "> - Alexander Mark</p>
+         <div style={{paddingBottom: '100px'}} className="flex justify-center w-full gap-2">
+  <a href="#feedback1" className=" text-6xl font-extrabold text-yellow-600	 hover:font-bold ">.</a> 
+  <a href="#feedback2" className=" text-6xl font-extrabold text-yellow-600	 hover:font-bold ">.</a> 
+  <a href="#feedback3" className=" text-6xl font-extrabold text-yellow-600	 hover:font-bold ">.</a> 
   
 </div>
             </div>
@@ -61,10 +61,10 @@ const ClientReviews = () => {
          <i className="text-1xl  font-semibold text-white">The dishes prepared by the chef were bursting with flavor and expertly presented. </i>
          <p className="font-bold text-2xl mt-4"> - Maria Jahan</p>
 
-         <div className="flex justify-center w-full py-2 gap-2">
-  <a href="#feedback1" className=" text-8xl font-extrabold text-yellow-600	 hover:font-bold ">.</a> 
-  <a href="#feedback2" className=" text-8xl font-extrabold text-yellow-600	 hover:font-bold ">.</a> 
-  <a href="#feedback3" className=" text-8xl font-extrabold text-yellow-600	 hover:font-bold ">.</a> 
+         <div style={{paddingBottom: '100px'}} className="flex justify-center w-full  gap-2">
+  <a href="#feedback1" className=" text-6xl font-extrabold text-yellow-600	 hover:font-bold ">.</a> 
+  <a href="#feedback2" className=" text-6xl font-extrabold text-yellow-600	 hover:font-bold ">.</a> 
+  <a href="#feedback3" className=" text-6xl font-extrabold text-yellow-600	 hover:font-bold ">.</a> 
   
 </div>
             </div>

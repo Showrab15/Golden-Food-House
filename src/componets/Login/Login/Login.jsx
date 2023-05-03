@@ -51,7 +51,7 @@ const Login = () => {
         console.log(loggedInUser);
         navigate(from, { replace: true })
 
-        setSuccess('User Login successfully complete');
+        setSuccess('User Login Successful By  google Account');
         setError('')
 
       })
