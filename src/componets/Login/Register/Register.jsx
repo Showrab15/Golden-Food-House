@@ -1,10 +1,11 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../provider/AuthProvider';
+import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
 
-    const {createUser} = useContext(AuthContext)
+    const {createUser, userUpdateProfile, user} = useContext(AuthContext)
 
 const [error, setError] = useState('');
 const [success, setSuccess] = useState('');
@@ -17,20 +18,21 @@ const [ accepted, setAccepted] = useState(false)
         
 event.preventDefault();
 const form = event.target;
-console.log(form.email.value)
+// console.log(form.email.value)
 const name = form.name.value;
-const photoUrl = form.photo.value;
+const photoURL = form.photo.value;
 const email = form.email.value
 const password = form.password.value;
 
-        createUser(email, password,name, photoUrl)
+        createUser(email, password)
         .then(result => {
             const loggedUser = result.user;
-            console.log(loggedUser);
+            updateUserData(loggedUser, name, photoURL)
+            // console.log(loggedUser);
             form.reset()
             setSuccess('Account has been created successfully');
             setError('');
-
+           
         })
         .catch(error =>{
             console.log(error)
@@ -39,7 +41,20 @@ const password = form.password.value;
         })
     }
 
-  
+ 
+   
+  const updateUserData=(user, name, photoURL)=>{
+     userUpdateProfile(user, name, photoURL)
+            .then(() => {
+            setSuccess(name)
+              // ...
+            }).catch((error) => {
+              // An error occurred
+              // ...
+              setError(error.message)
+            });
+
+  }
 
     return (
         <div className="my-container">
@@ -47,7 +62,7 @@ const password = form.password.value;
 <form  onSubmit={handleRegister} className="hero ">
   <div className="hero-content ">
    
-    <div className="card flex-shrink-0 w-96 max-w-sm shadow-2xl bg-base-100">
+    <div className="card mr-4 md:mr-0 flex-shrink-0 w-96 max-w-sm md:shadow-2xl bg-base-100">
       <div className="card-body">
         <div className="form-control">
           <label className="label">
@@ -59,7 +74,7 @@ const password = form.password.value;
           <label className="label">
             <span className="label-text">Photo URL</span>
           </label>
-          <input name="photo" type="text" placeholder="photo url" className="input input-bordered" required />
+          <input name="photo" type="text" placeholder="photo url" className="input input-bordered"  />
         </div>
 
         <div className="form-control">

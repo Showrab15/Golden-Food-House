@@ -4,8 +4,9 @@ import { AuthContext } from '../../provider/AuthProvider';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-    const { user  , logOut} = useContext(AuthContext)
-console.log(user)
+    const { user,  logOut} = useContext(AuthContext)
+  console.log(user);
+//  console.log(updateProfile);
 
     const handleLogOut = ()=>{
         logOut()
@@ -58,7 +59,7 @@ console.log(user)
             </ul>
             <div className="flex items-center">        
                 {
-                    user && <img title={user.displayName} className="w-[30px] h-[30px] rounded-full mr-4" src={user.photoURL} alt="" />
+                    user && <img title={user.displayName} className="w-[30px] lg:block hidden h-[30px] rounded-full mr-4" src={user.photoURL} alt="" />
                 }         
             {
                                 user ?
@@ -165,15 +166,17 @@ console.log(user)
 
 
 
-                            {
+                                {
+                    user && <img title={user.displayName} className="w-[30px] h-[30px] lg:block rounded-full mr-4" src={user.photoURL} alt="" />
+                }         
+            {
                                 user ?
-                                    <button onClick={handleLogOut} style={{ background: 'linear-gradient(90deg, #7E90FE 0%, #9873FF 100%)' }} className=' hidden border-none btn lg:block  text-white text-base'>Logout</button>
+                                    <button onClick={handleLogOut} style={{ background: 'linear-gradient(90deg, #7E90FE 0%, #9873FF 100%)' }} className=' mt-4 border-none btn lg:block  text-white text-base'>Logout</button>
                                     :
 
-                                    <Link to="login">  <button style={{ background: 'linear-gradient(90deg, #7E90FE 0%, #9873FF 100%)' }} className=' hidden border-none btn lg:block  text-white text-base'>Login</button></Link>
+                                    <Link to="login">  <button style={{ background: 'linear-gradient(90deg, #7E90FE 0%, #9873FF 100%)' }} className='  border-none btn lg:block  text-white text-base'>Login</button></Link>
 
                             }
-
                                 </div>
                             </nav>
                         </div>

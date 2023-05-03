@@ -8,7 +8,7 @@ import { FaRegGrinHearts } from 'react-icons/fa';
 
 const SingleRecipe = ({singleRecipe}) => {
     const {recipe_name, cooking_method, rating, recipe_img_url, ingredients}= singleRecipe;
-    console.log(singleRecipe);
+    // console.log(singleRecipe);
 
 
 const handleFavoriteToast =()=>{
@@ -22,9 +22,9 @@ const handleFavoriteToast =()=>{
             <div className="card w-full opacity-100 glass">
   <div className="card-body">
     <h2 className="card-title">{recipe_name}</h2>
-    <p>Cooking Method : {cooking_method}</p>
-    <p  className='flex'> Rating : <Rating style={{ maxWidth: 100 }} value={rating} readOnly /></p>
-    <p className="font-bold">Ingredients : </p>
+    <p> <span className="font-semibold"> Cooking Method</span>: {cooking_method}</p>
+    <p  className='flex'> <span className="font-semibold"> Rating</span> : <Rating style={{ maxWidth: 100 }} value={rating} readOnly /></p>
+    <p className="font-bold"> <span className="font-semibold"> Ingredients</span>: </p>
     {
    ingredients.map(ingre => <li>{ingre}</li> )
     }
