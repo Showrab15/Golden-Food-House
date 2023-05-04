@@ -49,7 +49,8 @@ const ChefDetails = () => {
 <hr style={{ border:" 1px solid  #FF900E"}}  className="w-32 mx-auto mt-2  " />
       <div className="grid md:grid-cols-3 gap-10">
         {
-          recipes.map(singleRecipe => <SingleRecipe 
+          recipes.map((singleRecipe,index) => <SingleRecipe 
+          key={index}
             singleRecipe={singleRecipe}
           ></SingleRecipe> )
         }

@@ -10,7 +10,7 @@ const Header = () => {
 
      <div className="my-container">
    <div className="relative h-full">
-            <img src={restaurantBackground} alt="Restaurant background" className=" object-cover  h-full rounded-lg " />
+            <img src={restaurantBackground} alt="" className=" object-cover  h-full rounded-lg " />
             <div className="absolute backdrop-brightness-50 w-full h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center  flex justify-center items-center text-white">
                <div className="">
                  <h1 className="md:text-5xl text-base font-bold mb-4">IT'S ALL ABOUT GOOD FOOD & TASTE</h1>
