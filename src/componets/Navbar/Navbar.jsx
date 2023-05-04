@@ -18,15 +18,15 @@ const Navbar = () => {
 
     return (
         <div className='my-container'>
-        <div className='relative bg-slate-400 flex items-center justify-between'>
+        <div className='relative  flex items-center justify-between'>
             <Link
                 to='/'
-                aria-label='Golden Rice House'
-                title='Golden Rice House'
+                aria-label='Golden Food House'
+                title='Golden Food House'
                 className='inline-flex items-center'
             >
                 <div className='flex items-center justify-center '>
-                    <h1 className="text-2xl font-bold">Golden Rice House</h1>
+                    <h1 className="text-2xl font-bold">Golden Food House</h1>
                 </div>
 
             </Link>
@@ -36,7 +36,7 @@ const Navbar = () => {
                         to='/'
                         aria-label='Home'
                         title='Home'
-                        className={({ isActive }) => (isActive ? 'active' : 'default')}
+                        className={({ isActive }) => (isActive ? 'text-red-400' : '')}
                     >
                         Home
                     </NavLink>
@@ -49,7 +49,7 @@ const Navbar = () => {
                         to='blogs'
                         aria-label='blogs'
                         title='blogs'
-                        className={({ isActive }) => (isActive ? 'active' : 'default')}
+                        className={({ isActive }) => (isActive ? 'text-red-400' : '')}
                     >
                         Blogs
                     </NavLink>
@@ -97,12 +97,12 @@ const Navbar = () => {
                         <div className='p-5 bg-white border rounded shadow-sm'>
                             <div className='flex items-center justify-between mb-4'>
 
-                                <h1 className="text-2xl font-bold">Golden Rice House</h1>
+                                <h1 className="text-2xl font-bold">Golden Food House</h1>
                                 <div>
                                     <Link
                                         to='/'
-                                        aria-label='Golden Rice House'
-                                        title='Golden Rice House'
+                                        aria-label='Golden Food House'
+                                        title='Golden Food House'
                                         className='inline-flex items-center'
                                     >
                                         <div className='flex items-center justify-center '>
@@ -130,28 +130,28 @@ const Navbar = () => {
                             <nav>
                                 <ul className='space-y-4'>
                                     <li>
-                                        <Link
+                                        <NavLink
                                             to='/'
                                             aria-label='home'
                                             title='home'
-                                            className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                                            className={({ isActive }) => (isActive ? 'text-red-400' : '')}
                                         >
                                             Home
-                                        </Link>
+                                        </NavLink>
                                     </li>
                               
                                   
 
 
                                     <li>
-                                        <Link
+                                        <NavLink
                                             to='/blogs'
                                             aria-label='blogs'
                                             title='blogs'
-                                            className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                                            className={({ isActive }) => (isActive ? 'text-red-400' : '')}
                                         >
                                             Blogs
-                                        </Link>
+                                        </NavLink>
                                     </li>
 
 

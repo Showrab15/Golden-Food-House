@@ -16,7 +16,7 @@ const Footer = () => {
     <p className="link link-hover"> reservation@reciborestaurant.com</p>
   </div> 
   <div>
-    <span className="footer-title">Rannaghor</span> 
+    <span className="footer-title">Golden Food House</span> 
    <p className="link link-hover">About us</p>
    <p className="link link-hover">Chefs</p>
    <p className="link link-hover">Recipe</p>

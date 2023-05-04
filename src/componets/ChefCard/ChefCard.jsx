@@ -4,6 +4,7 @@ import { FaHeart, FaUtensils, FaMedal } from "react-icons/fa";
 import chefIcon from '../../assets/chefIcon.png'
 import recipeIcon from '../../assets/recipeicon.png'
 import { AuthContext } from '../../provider/AuthProvider';
+import LazyLoad from 'react-lazyload';
 const ChefCard = ({ chef }) => {
    
     // console.log(chef);
@@ -12,8 +13,10 @@ const ChefCard = ({ chef }) => {
         <div className="my-container">
             <div className="w-full h-full rounded-md  px-4 py-4">
                 <div>
+                   
+                    <LazyLoad height={800}>
                     <img className="w-full h-full rounded-lg" src={chef_picture_url} alt="" />
-
+      </LazyLoad>
                   <div className="mt-4">
                   <div className="flex items-center">
                             <img className="w-[30px] h-[30px] mr-4 rounded-lg bg-red-300" src={chefIcon} alt="" />

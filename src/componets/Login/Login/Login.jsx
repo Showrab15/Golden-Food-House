@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../provider/AuthProvider';
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
+import { FaGithub, FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
 
@@ -88,9 +89,9 @@ const Login = () => {
     <div className="my-container">
       <h1 className="font-bold text-4xl text-center">Login Now </h1>
       <div className="hero ">
-        <div  className="hero-content  ">
+        <div  className="hero-content">
 
-          <div className="card  md:mr-0 mr-4 px-4 flex-shrink-0 w-full h-full pb-8 max-w-sm md:shadow-2xl bg-base-100">
+          <div className="card  md:mr-0 mr-4 p-0 md:px-4 flex-shrink-0 w-96  pb-8 max-w-sm md:shadow-2xl bg-base-100">
             <form onSubmit={handleSignIn} className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -104,18 +105,18 @@ const Login = () => {
                 </label>
                 <input name="password" type="password" placeholder="password" className="input input-bordered" required />
                 <label className="label">
-                  <small>New to Rannaghor ?  <Link to="/register" className="label-text-alt link link-hover">Register</Link></small>
+                  <small className="font semibold">New to Golden Food House ?  <Link to="/register" className="label-text-alt link hover:text-orange-600 ">Register</Link></small>
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
+                <button className="btn w-48 mx-auto btn-primary">Login</button>
 
                 <p className="mt-2 font-semibold text-xl text-green-600">{success}</p>
                 <p className="mt-2 font-semibold text-xl text-red-600">{error}</p>
               </div>
-            </form>
-              <button onClick={handleGoogleSignIn} className="btn btn-primary mt-2">Login With Google</button>
-        <button onClick={handleGithubSignIn} className="btn btn-primary mt-2">Login With GitHub</button>
+            </form> 
+              <button onClick={handleGoogleSignIn} className="btn w-48 mx-auto  btn-primary mt-2"><FaGoogle className="mr-1 text-orange-400 "></FaGoogle>Login With Google</button>
+        <button onClick={handleGithubSignIn} className="btn w-48 mx-auto btn-primary mt-2"><FaGithub className="text-black mr-1"></FaGithub>Login With GitHub</button>
           </div>
         
         </div>

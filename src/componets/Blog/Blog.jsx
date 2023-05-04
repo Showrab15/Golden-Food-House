@@ -1,17 +1,33 @@
 import React from 'react';
-import Pdf from '../Pdf/Pdf';
+// import ReactToPdf from '../ReactToPdf/ReactToPdf';
+// import { PDFDownloadLink } from '@react-pdf/renderer';
+import ReactDOM from "react-dom";
+ import  Pdf from  "react-to-pdf";
+
+  const ref = React.createRef();
+
+
 const Blog = () => {
   return (
-    <div>
-      <section class="mt-8 mb-8 w-[50%] mx-auto">
-        <h1 class="text-3xl font-bold text-center mb-8 underline">Few Question Answer</h1>
+   <div>
+    <div className='text-center mt-10'>
+                <Pdf targetRef={ref} filename="code-example.pdf">
+        {({ toPdf }) => <button className='btn btn-primary' onClick={toPdf}>Generate Blog Pdf</button>}
+      </Pdf>
+      </div>
+
+     <div>
+      <section ref={ref} className="mt-8 mb-8 w-[50%] mx-auto">
+        <h1 className="text-3xl font-bold text-center  ">Few Question Answer</h1>
+        <hr style={{ border:" 1px solid  #FF900E"}}  className="w-48 mx-auto mt-2 " />
+<hr style={{ border:" 1px solid  #FF900E"}}  className="w-32 mx-auto mt-2 mb-8 " />
      <h1 className='text-2xl font-bold '>  1. Tell us the differences between uncontrolled and controlled components</h1>
      <p className="font-semibold">Ans: In React, controlled components refer to components that have their state and behavior controlled by the parent component. These components rely on props passed down from the parent component to update their state and behavior. Uncontrolled components refer to components that manage their own state internally</p>
-     <h1 className='text-2xl font-bold '>  2. How to validate React props using PropTypes
+     <h1 className='text-2xl font-bold '>  2. How to validate React props using PropTypes ?
 </h1>
      <p className="font-semibold"> Ans:
- Some Steps to validate React props using PropTypes:
-<br />
+ 
+
 Import the PropTypes library in your component using import PropTypes from 'prop-types'; Then Define the expected data types for your props using the propTypes object inside your component. Specify the data type for each prop using PropTypes, such as PropTypes.string, PropTypes.number, PropTypes.bool, etc. Must be Assign the propTypes object to your component using the MyComponent.propTypes syntax.</p>
 
      <h1 className='text-2xl font-bold '>  3. Tell us the difference between nodejs and express js?</h1>
@@ -20,10 +36,20 @@ Import the PropTypes library in your component using import PropTypes from 'prop
      <h1 className='text-2xl font-bold '>   4. What is a custom hook, and why will you create a custom hook?
 </h1>
      <p className="font-semibold">Ans: Custom hooks allow you to extract and reuse stateful logic from components, reducing duplication and keeping your code more modular and easier to maintain.Custom hooks are created by defining a function that uses the built-in React hooks like useState, useEffect, useContext, etc., and returns some state or behavior that can be used by components.</p>
+   
+     
       </section>
-<Pdf></Pdf>
+    
+    
     </div>
+   </div>
   );
 };
 
 export default Blog;
+
+  // <div className="flex justify-center mx-auto">
+  //     <PDFDownloadLink document={<ReactToPdf/>} fileName='form'>
+  //      {({loading}) => (loading ? <button >Loading Document...</button> : <button className="btn btn-primary ">Download Question Answser  </button> )}
+  //      </PDFDownloadLink>
+  //     </div>

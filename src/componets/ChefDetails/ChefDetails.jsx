@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import SingleRecipe from '../SingleRecipe/SingleRecipe';
 import { FaHeart, FaUtensils, FaMedal  } from 'react-icons/fa';
 import { AuthContext } from '../../provider/AuthProvider';
+import LazyLoad from 'react-lazyload';
 
 const ChefDetails = () => {
   const chefDetails = useLoaderData()
@@ -19,7 +20,10 @@ const ChefDetails = () => {
 <hr style={{ border:" 1px solid  #FF900E"}}  className="w-32 mx-auto mt-2  " />
 <div>
       <div className="my-container card md:w-full w-96  image-full">
+        <LazyLoad height={800}>
         <figure><img className="md:w-full w-96" src={chef_picture_url} alt="" /></figure>
+
+        </LazyLoad>
         <div className="card-body">
 
           <div className="md:mt-96 mx-auto card md:w-96   transition ease-in-out delay-50 bg-neutral hover:-translate-y-1 hover:scale-110  duration-300 text-neutral-content">

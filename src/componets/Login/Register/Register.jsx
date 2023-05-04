@@ -90,11 +90,11 @@ const password = form.password.value;
           </label>
           <input name="password" type="password" placeholder="password" className="input input-bordered" required />
           <label className="label">
-        <small>Already Have An Account? <Link to="/login" className="label-text-alt link link-hover">Login</Link></small>    
+        <small className="font-semibold">Already Have An Account? <Link to="/login" className="underline text-orange-500 ">Login</Link></small>    
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Sign up</button>
+          <button className="btn  w-48 mx-auto btn-primary">Sign up</button>
         
       
           <p className="mt-2 font-semibold text-xl text-green-600">{success}</p>
