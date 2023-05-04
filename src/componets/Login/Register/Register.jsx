@@ -12,7 +12,8 @@ const [success, setSuccess] = useState('');
 
 const [ accepted, setAccepted] = useState(false)
 
-
+const navigate = useNavigate();
+  // console.log(location);
 
     const handleRegister =(event)=>{
         
@@ -32,6 +33,8 @@ const password = form.password.value;
             form.reset()
             setSuccess('Account has been created successfully');
             setError('');
+                    navigate('/login')
+
            
         })
         .catch(error =>{
