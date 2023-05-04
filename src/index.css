@@ -11,4 +11,13 @@
   .btn-outlined{
     @apply  font-medium  rounded-lg transition duration-200  shadow-md  md:mb-0  px-2 py-2 md:px-8 md:py-3 m-2 text-lg text-sky-500  hover:border-transparent border-2 border-cyan-200
   }
+
+  .long-line{
+    @apply  border  border-orange-500 w-48 mx-auto mt-2
+  }
+
+.short-line{
+  @apply border border-orange-500 w-32 mx-auto mt-2
+
+  }
   

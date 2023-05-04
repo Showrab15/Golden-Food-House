@@ -33,7 +33,7 @@ const password = form.password.value;
             form.reset()
             setSuccess('Account has been created successfully');
             setError('');
-                    navigate('/login')
+            navigate('/login')
 
            
         })
@@ -61,35 +61,39 @@ const password = form.password.value;
 
     return (
         <div className="my-container">
-            <h1 className="font-bold text-4xl text-center">Register Now </h1>
-<form  onSubmit={handleRegister} className="hero ">
-  <div className="hero-content ">
-   
-    <div className="card mr-4 md:mr-0 flex-shrink-0 w-96 max-w-sm md:shadow-2xl bg-base-100">
-      <div className="card-body">
-        <div className="form-control">
+         
+<div className=" w-full mt-">
+    
+  <div className="hero-content p-0 ">
+    
+    <form  onSubmit={handleRegister}  className="card lg:w-[1200px] p-8 flex-shrink-0 w-full max-w-sm outline outline-offset-2 outline-pink-500  bg-base-100">
+    <h1 className="font-bold text-4xl text-center">Create An Account </h1>
+            <hr className="long-line" />
+            <hr className="short-line" />
+      <div className="w-full">
+        <div className="form-control mt-4">
           <label className="label">
-            <span className="label-text">Name</span>
+            <span className="label-text font-semibold">Name</span>
           </label>
           <input name="name" type="text" placeholder="name" className="input input-bordered" required/>
         </div>
-        <div className="form-control">
+        <div className="form-control mt-4">
           <label className="label">
-            <span className="label-text">Photo URL</span>
+            <span className="label-text font-semibold">Photo URL</span>
           </label>
           <input name="photo" type="text" placeholder="photo url" className="input input-bordered"  />
         </div>
 
-        <div className="form-control">
+        <div className="form-control mt-4">
           <label className="label">
-            <span className="label-text">Email</span>
+            <span className="label-text font-semibold">Email</span>
           </label>
           <input name="email" type="text" placeholder="email" className="input input-bordered" required />
         </div>
 
-        <div className="form-control">
+        <div className="form-control mt-4">
           <label className="label">
-            <span className="label-text">Password</span>
+            <span className="label-text font-semibold">Password</span>
           </label>
           <input name="password" type="password" placeholder="password" className="input input-bordered" required />
           <label className="label">
@@ -97,16 +101,17 @@ const password = form.password.value;
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn  w-48 mx-auto btn-primary">Sign up</button>
+          <button className="btn  btn-primary">Sign up</button>
         
       
           <p className="mt-2 font-semibold text-xl text-green-600">{success}</p>
           <p  className="mt-2 font-semibold text-xl text-red-600">{error}</p>
         </div>
       </div>
-    </div>
+    </form>
+
   </div>
-</form>     
+</div>     
    </div>
     );
 };
