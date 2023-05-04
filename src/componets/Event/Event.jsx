@@ -6,14 +6,15 @@ import event3 from '../../assets/event4.jpg'
 const Event = () => {
     return (
         <div>
-            <div className="my-container">
+            <div className="my-container mx-aut">
                 <h2 className="text-center text-4xl  font-bold italic">We Specialize in Intimate
                     Catering</h2>
                 <p className="text-center italic font-semibold mt-4">Think back to your last party. It was probably a great time
                     with amazing friends</p>
                 <hr style={{ border: " 1px solid  #FF900E" }} className="w-48 mx-auto mt-2 " />
                 <hr style={{ border: " 1px solid  #FF900E" }} className="w-32 mx-auto mt-2  " />
-                <div className="grid md:gap-10 mt-4 md:grid-cols-4">
+
+                <div className="grid mx-auto md:gap-10 mt-4 md:grid-cols-3">
 
                     <div className="card mt-8 md:mt-0 backdrop-brightness-50 w-full bg-base-100 ">
                         <figure><img src={event1} alt="" /></figure>
