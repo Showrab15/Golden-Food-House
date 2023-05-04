@@ -6,7 +6,7 @@ import { FaGithub, FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
 
-  const { signIn, user, signInWithGoogle , signInWithGithub } = useContext(AuthContext)
+  const { signIn, user, signInWithGoogle, signInWithGithub } = useContext(AuthContext)
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('');
   const googleProvider = new GoogleAuthProvider()
@@ -27,7 +27,7 @@ const Login = () => {
 
     signIn(email, password)
       .then((result) => {
-        // Signed in 
+       
         const loggedUser = result.user;
         console.log(loggedUser)
         form.reset()
@@ -53,7 +53,7 @@ const Login = () => {
         navigate(from, { replace: true })
 
         setSuccess('User Login Successful By  google Account');
-        setError('')
+        setError('');
 
       })
       .catch(error => {
@@ -89,7 +89,7 @@ const Login = () => {
     <div className="my-container">
       <h1 className="font-bold text-4xl text-center">Login Now </h1>
       <div className="hero ">
-        <div  className="hero-content">
+        <div className="hero-content">
 
           <div className="card  md:mr-0 mr-4 p-0 md:px-4 flex-shrink-0 w-96  pb-8 max-w-sm md:shadow-2xl bg-base-100">
             <form onSubmit={handleSignIn} className="card-body">
@@ -114,13 +114,13 @@ const Login = () => {
                 <p className="mt-2 font-semibold text-xl text-green-600">{success}</p>
                 <p className="mt-2 font-semibold text-xl text-red-600">{error}</p>
               </div>
-            </form> 
-              <button onClick={handleGoogleSignIn} className="btn w-48 mx-auto  btn-primary mt-2"><FaGoogle className="mr-1 text-orange-400 "></FaGoogle>Login With Google</button>
-        <button onClick={handleGithubSignIn} className="btn w-48 mx-auto btn-primary mt-2"><FaGithub className="text-black mr-1"></FaGithub>Login With GitHub</button>
+            </form>
+            <button onClick={handleGoogleSignIn} className="btn w-48 mx-auto  btn-primary mt-2"><FaGoogle className="mr-1 text-orange-400 "></FaGoogle>Login With Google</button>
+            <button onClick={handleGithubSignIn} className="btn w-48 mx-auto btn-primary mt-2"><FaGithub className="text-black mr-1"></FaGithub>Login With GitHub</button>
           </div>
-        
+
         </div>
-      
+
       </div>
 
     </div>

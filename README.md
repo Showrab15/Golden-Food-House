@@ -21,6 +21,8 @@ RannaGhor
 - Feature 3: CHef Details zone
 - Feature 4: top Recipe zone
 - Feature 5 : SIgnUp/SignIn zone
+- Feature 6 : Testimonial  zone
+- Feature 7 : Event  zone
 
 ## Installation
 
@@ -31,6 +33,8 @@ RannaGhor
 5. React router
 6. Vite + react
 7. firebase
+8. react lazy loader
+8. react lazy pdf
 
 
 ## Usage

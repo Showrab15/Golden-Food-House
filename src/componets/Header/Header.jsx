@@ -1,5 +1,4 @@
 import React from 'react';
-import './Header.css'
 import banner from '../../assets/banner.jpg'
 import { FaUtensils } from 'react-icons/fa';
 
