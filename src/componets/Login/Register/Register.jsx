@@ -1,16 +1,14 @@
 import React, { useContext, useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../provider/AuthProvider';
-import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
 
-    const {createUser, userUpdateProfile, user} = useContext(AuthContext)
+    const {createUser, userUpdateProfile} = useContext(AuthContext)
 
 const [error, setError] = useState('');
 const [success, setSuccess] = useState('');
 
-const [ accepted, setAccepted] = useState(false)
 
 const navigate = useNavigate();
   // console.log(location);
@@ -62,7 +60,7 @@ const password = form.password.value;
     return (
         <div className="my-container">
          
-<div className=" w-full mt-">
+
     
   <div className="hero-content p-0 ">
     
@@ -111,7 +109,6 @@ const password = form.password.value;
     </form>
 
   </div>
-</div>     
    </div>
     );
 };

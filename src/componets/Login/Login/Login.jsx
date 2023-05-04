@@ -87,44 +87,52 @@ const Login = () => {
 
   return (
     <div className="my-container">
-      <h1 className="font-bold text-4xl text-center">Login Now </h1>
-      <div className="hero ">
-        <div className="hero-content">
+      
+        <div className="hero-content p-0">
+<div className="card lg:w-[1200px] p-8 flex-shrink-0 w-full max-w-sm outline outline-offset-2 outline-pink-500  bg-base-100">
+<form onSubmit={handleSignIn} >
+          <h1 className="font-bold text-4xl text-center">Login Please </h1>
+          <hr className="long-line" />
+          <hr className="short-line" />
 
-          <div className="card  md:mr-0 mr-4 p-0 md:px-4 flex-shrink-0 w-96  pb-8 max-w-sm md:shadow-2xl bg-base-100">
-            <form onSubmit={handleSignIn} className="card-body">
-              <div className="form-control">
+            <div  className="w-full">
+              <div className="form-control mt-4">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text font-semibold">Email</span>
                 </label>
                 <input name="email" type="email" placeholder="email" className="input input-bordered" required />
               </div>
-              <div className="form-control">
+              <div className="form-control mt-2">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text  font-semibold">Password</span>
                 </label>
                 <input name="password" type="password" placeholder="password" className="input input-bordered" required />
                 <label className="label">
-                  <small className="font semibold">New to Golden Food House ?  <Link to="/register" className="label-text-alt link hover:text-orange-600 ">Register</Link></small>
+                  <small className="font semibold">New to Golden Food House ?  <Link to="/register" className="underline text-orange-500 ">Register</Link></small>
                 </label>
               </div>
-              <div className="form-control mt-6">
-                <button className="btn w-48 mx-auto btn-primary">Login</button>
+              <div className="form-control ">
+                
+              <p className="mb-2 font-semibold text-xl text-green-600">{success}</p>
+                <p className="mb-2 font-semibold text-xl text-red-600">{error}</p>
+                <button className="btn btn-primary">Login</button>
 
-                <p className="mt-2 font-semibold text-xl text-green-600">{success}</p>
-                <p className="mt-2 font-semibold text-xl text-red-600">{error}</p>
               </div>
-            </form>
-            <button onClick={handleGoogleSignIn} className="btn w-48 mx-auto  btn-primary mt-2"><FaGoogle className="mr-1 text-orange-400 "></FaGoogle>Login With Google</button>
-            <button onClick={handleGithubSignIn} className="btn w-48 mx-auto btn-primary mt-2"><FaGithub className="text-black mr-1"></FaGithub>Login With GitHub</button>
-          </div>
+            </div>
+          
+          </form>
+          <button onClick={handleGoogleSignIn} className="btn  btn-primary mt-2"><FaGoogle className="mr-1 text-orange-400 "></FaGoogle>Login With Google</button>
+            <button onClick={handleGithubSignIn} className="btn btn-primary mt-2"><FaGithub className="text-black mr-1"></FaGithub>Login With GitHub</button>
+</div>
+         
 
         </div>
 
       </div>
 
-    </div>
   );
 };
 
 export default Login;
+
+
