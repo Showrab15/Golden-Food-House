@@ -10,9 +10,9 @@ import client3 from '../../assets/client3.jpg'
 const ClientReviews = () => {
     return (
         <div className="my-container ">
-<h2 className="text-4xl font-bold text-center italic	 ">Our Testimonial</h2>
-<hr style={{ border:" 1px solid  #FF900E"}}  className="w-48 mx-auto mt-2 " />
-<hr style={{ border:" 1px solid  #FF900E"}}  className="w-32 mx-auto mt-2 mb-8 " />
+<h2 className="title">Our Testimonial</h2>
+<hr   className="long-line " />
+<hr   className="short-line mb-8 " />
 
 <div className="carousel w-full">
 
@@ -59,9 +59,9 @@ const ClientReviews = () => {
   
 </div> 
 <div className="flex justify-center w-full py-2 gap-2">
-  <a href="#feedback1" className="btn btn-xs">1</a> 
-  <a href="#feedback2" className="btn btn-xs">2</a> 
-  <a href="#feedback3" className="btn btn-xs">3</a> 
+  <a href="#feedback1" className="button btn-xs">1</a> 
+  <a href="#feedback2" className="button  btn-xs">2</a> 
+  <a href="#feedback3" className="button btn-xs">3</a> 
  
 </div>
         </div>

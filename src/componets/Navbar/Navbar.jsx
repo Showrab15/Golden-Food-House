@@ -63,10 +63,10 @@ const Navbar = () => {
                 }         
             {
                                 user ?
-                                    <button onClick={handleLogOut} style={{ background: 'linear-gradient(90deg, #7E90FE 0%, #9873FF 100%)' }} className=' hidden border-none btn lg:block  text-white text-base'>Logout</button>
+                                    <button onClick={handleLogOut} className=' hidden button lg:block  text-white text-base'>Logout</button>
                                     :
 
-                                    <Link to="login">  <button style={{ background: 'linear-gradient(90deg, #7E90FE 0%, #9873FF 100%)' }} className=' hidden border-none btn lg:block  text-white text-base'>Login</button></Link>
+                                    <Link to="login">  <button className=' hidden button lg:block  text-white text-base'>Login</button></Link>
 
                             }
             </div>
@@ -171,10 +171,10 @@ const Navbar = () => {
                 }         
             {
                                 user ?
-                                    <button onClick={handleLogOut} style={{ background: 'linear-gradient(90deg, #7E90FE 0%, #9873FF 100%)' }} className=' mt-4 border-none btn lg:block  text-white text-base'>Logout</button>
+                                    <button onClick={handleLogOut} className=' mt-4  button lg:block  text-white text-base'>Logout</button>
                                     :
 
-                                    <Link to="login">  <button style={{ background: 'linear-gradient(90deg, #7E90FE 0%, #9873FF 100%)' }} className='  border-none btn lg:block  text-white text-base'>Login</button></Link>
+                                    <Link to="login">  <button className=' button lg:block  text-white text-base'>Login</button></Link>
 
                             }
                                 </div>

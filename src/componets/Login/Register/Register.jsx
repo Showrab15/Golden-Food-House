@@ -65,7 +65,7 @@ const password = form.password.value;
   <div className="hero-content p-0 ">
     
     <form  onSubmit={handleRegister}  className="card lg:w-[1200px] p-8 flex-shrink-0 w-full max-w-sm outline outline-offset-2 outline-pink-500  bg-base-100">
-    <h1 className="font-bold text-4xl text-center">Create An Account </h1>
+    <h1 className="title">Create An Account </h1>
             <hr className="long-line" />
             <hr className="short-line" />
       <div className="w-full">
@@ -99,7 +99,7 @@ const password = form.password.value;
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn  btn-primary">Sign up</button>
+          <button className="button">Sign up</button>
         
       
           <p className="mt-2 font-semibold text-xl text-green-600">{success}</p>

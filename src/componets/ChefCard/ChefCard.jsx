@@ -11,15 +11,15 @@ const ChefCard = ({ chef }) => {
     const { chef_picture_url, chef_name,id, experience_years, likes, number_of_recipes ,recipes} = chef
     return (
         <div className="my-container">
-            <div className="w-full h-full rounded-md  px-4 py-4">
+            <div className="w-full h-full bg-red-50 card rounded-lg pb-4 border-2 border-orange-600 ">
                 <div>
                    
-                    <LazyLoad height={800}>
+                    <LazyLoad>
                     <img className="w-full h-full rounded-lg" src={chef_picture_url} alt="" />
       </LazyLoad>
-                  <div className="mt-4">
+                  <div className="mt-4 ml-4 h-full">
                   <div className="flex items-center">
-                            <img className="w-[30px] h-[30px] mr-4 rounded-lg bg-red-300" src={chefIcon} alt="" />
+                            <img className="w-[30px] h-[30px] mr-4 rounded-lg " src={chefIcon} alt="" />
                     
                         <h1 className="font-bold text-lg    ">
 
@@ -33,18 +33,20 @@ const ChefCard = ({ chef }) => {
                         <div className="flex items-center">
                             <img className="w-[30px] h-[30px] mt-2 mr-4 bg-red-300 rounded-lg" src={recipeIcon} alt="" />
                             <p style={{ color: '#757575' }} className="font-semibold text-lg  mt-4">
-                                {number_of_recipes} Number Of Recipes </p>
+                                {number_of_recipes} Recipes </p>
                         </div>
 
 
-                        <p style={{ color: '#757575' }} className="font-semibold text-lg mt-4 flex items-center "> <FaHeart className="text-red-600 mr-2 w-[20px] h-[20px]"></FaHeart> Liked  By {likes} People</p>
+                        <p style={{ color: '#757575' }} className="font-semibold text-lg mt-4 mr-8 flex items-center "> <FaHeart className="text-red-600 mr-2 w-[20px] h-[20px]"></FaHeart> Liked   {likes} </p>
                     </div>
 
 
 
 
-                    <Link to={`/recipes/${id}`}><button className="font-bold text-base border-none btn btn-active btn-secondary rounded-lg  mt-2"> <FaUtensils className="mr-4 text-amber-400"></FaUtensils> View Recipes </button>
+               
+              <Link to={`/recipes/${id}`}><button className=" mt-4 font-bold text-base border-none  button rounded-lg"> <FaUtensils className="mr-4 text-amber-400"></FaUtensils> View Recipes </button>
                     </Link>
+                
                   </div>
 
                 </div>

@@ -20,10 +20,10 @@ const Chef = () => {
 
     return (
         <div className="my-container">
-            <h1 className="text-4xl font-bold text-center italic">Know About Our Chefs</h1>
+            <h1 className="title">Know About Our Chefs</h1>
 
-            <hr style={{ border: " 1px solid  #FF900E" }} className="w-48 mx-auto mt-2 " />
-            <hr style={{ border: " 1px solid  #FF900E" }} className="w-32 mx-auto mt-2  " />
+            <hr className="long-line " />
+            <hr className="short-line  " />
             <div className="grid  md:grid-cols-2 lg:grid-cols-2 justify-center gap-10 ">
                 {
                     chefs.map(chef => <ChefCard

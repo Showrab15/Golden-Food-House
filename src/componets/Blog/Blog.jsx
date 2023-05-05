@@ -11,16 +11,16 @@ const Blog = () => {
     <div>
       <div className='text-center mt-10'>
         <Pdf targetRef={ref} filename="blog-question-assignment10-showrab">
-          {({ toPdf }) => <button className='btn btn-secondary' onClick={toPdf}>Download  Pdf</button>}
+          {({ toPdf }) => <button className='button' onClick={toPdf}>Download  Pdf</button>}
         </Pdf>
       </div>
 
       <div>
         <section ref={ref} className="mt-8 mb-8 w-[50%] mx-auto">
           <h1 className="text-3xl font-bold text-center">Blog Question Answer</h1>
-          <hr style={{ border: " 1px solid  #FF900E" }} className="w-48 mx-auto mt-2 " />
-          <hr style={{ border: " 1px solid  #FF900E" }} className="w-32 mx-auto mt-2 mb-8 " />
-          <h1 className='text-2xl font-bold '>  1. Tell us the differences between uncontrolled and controlled components</h1>
+          <hr  className="long-line"/>
+          <hr className="short-line mb-8"/>
+          <h1 className='text-2xl font-bold'>  1. Tell us the differences between uncontrolled and controlled components</h1>
           <p className="font-semibold">Ans: In React, controlled components refer to components that have their state and behavior controlled by the parent component. These components rely on props passed down from the parent component to update their state and behavior. Uncontrolled components refer to components that manage their own state internally</p>
           <h1 className='text-2xl font-bold'>  2. How to validate React props using PropTypes ?
           </h1>

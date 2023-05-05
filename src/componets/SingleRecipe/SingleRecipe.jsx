@@ -33,7 +33,7 @@ const handleFavoriteToast =()=>{
    ingredients.map(ingre => <li className="font-semibold">{ingre}</li> )
     }
     <div className="card-actions ">
-      <button onClick={handleFavoriteToast} disabled={disabled} className="btn btn-active btn-secondary">Add To Favorite <FaRegGrinHearts className="text-white ml-2"></FaRegGrinHearts> </button>
+      <button onClick={handleFavoriteToast} disabled={disabled} className="button">Add To Favorite <FaRegGrinHearts className="text-white ml-2"></FaRegGrinHearts> </button>
     </div>
   </div>
 </div>

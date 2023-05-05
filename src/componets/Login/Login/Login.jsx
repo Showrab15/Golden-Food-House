@@ -91,7 +91,7 @@ const Login = () => {
         <div className="hero-content p-0">
 <div className="card lg:w-[1200px] p-8 flex-shrink-0 w-full max-w-sm outline outline-offset-2 outline-pink-500  bg-base-100">
 <form onSubmit={handleSignIn} >
-          <h1 className="font-bold text-4xl text-center">Login Please </h1>
+          <h1 className="title">Login Please </h1>
           <hr className="long-line" />
           <hr className="short-line" />
 
@@ -115,14 +115,17 @@ const Login = () => {
                 
               <p className="mb-2 font-semibold text-xl text-green-600">{success}</p>
                 <p className="mb-2 font-semibold text-xl text-red-600">{error}</p>
-                <button className="btn btn-primary">Login</button>
+                <button className="button">Login</button>
 
               </div>
             </div>
           
           </form>
-          <button onClick={handleGoogleSignIn} className="btn  btn-primary mt-2"><FaGoogle className="mr-1 text-orange-400 "></FaGoogle>Login With Google</button>
-            <button onClick={handleGithubSignIn} className="btn btn-primary mt-2"><FaGithub className="text-black mr-1"></FaGithub>Login With GitHub</button>
+          <div className="flex items-center">
+            <hr className="short-line" /> <p className="font-semibold">or</p> <hr className="short-line" />
+          </div>
+          <button onClick={handleGoogleSignIn} className="button mt-2"><FaGoogle className="mr-1 text-primary "></FaGoogle>Login With Google</button>
+            <button onClick={handleGithubSignIn} className="button mt-2"><FaGithub className="text-black mr-1"></FaGithub>Login With GitHub</button>
 </div>
          
 
