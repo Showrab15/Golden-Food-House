@@ -13,12 +13,12 @@ const [disabled , setDisabled] = useState(false)
 
 const handleFavoriteToast =()=>{
    
-    setDisabled(  toast("Added in the favorite List!"))
+    setDisabled(  toast("Added in the favorite List!💖"))
 
 }
 
     return (
-        <div className="my-container ">
+        <div className="my-container">
            
             <div className="card w-full mt-8 transition ease-in-out delay-80 bg-orange-200 hover:-translate-y-1 hover:scale-110  hover:bg-orange-300 duration-300   md:mr-0 mr-2  opacity-100 glass">
 

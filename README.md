@@ -15,14 +15,15 @@ Golden Food House
 
 * In this website we integrate contact information zone . It's important to include clear contact information on the website, such as an email address or phone number, so that users can get in touch with the chef for inquiries or business opportunities .
 
+* I also tried to create own css for clean code , these are set in index.css file
+
 ## Features
 - Feature 1: A navbar and header
 - Feature 2: Chef Card Zone
 - Feature 3: CHef Details zone
-- Feature 4: top Recipe zone
-- Feature 5 : SIgnUp/SignIn zone
-- Feature 6 : Testimonial  zone
-- Feature 7 : Event  zone
+- Feature 4 : SIgnUp/SignIn zone
+- Feature 5 : Testimonial  zone
+- Feature 6 : Events  zone
 
 ## Installation
 
@@ -34,7 +35,7 @@ Golden Food House
 6. Vite + react
 7. firebase
 8. react lazy loader
-8. react lazy pdf
+8. react to pdf
 
 
 ## Usage
