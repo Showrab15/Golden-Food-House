@@ -11,16 +11,17 @@ const Footer = () => {
   </div> 
   <div>
     <span className="footer-title italic">Contact Us</span> 
-    <p className="link link-hover"> Recibo, 99 Knightsbridge, London</p>
+    <p className="link link-hover"> Recibo, 99 Knightsbridge, China</p>
     <p className="link link-hover">+44-30-3544-7658</p>
-    <p className="link link-hover"> reservation@reciborestaurant.com</p>
+    <p className="link link-hover"> goldenfoodhuse@chefandrecipes.com</p>
   </div> 
   <div>
     <span className="footer-title">Golden Food House</span> 
-   <p className="link link-hover">About us</p>
    <p className="link link-hover">Chefs</p>
    <p className="link link-hover">Recipe</p>
    <p className="link link-hover">Testimonial</p>
+      <p className="link link-hover">Events </p>
+
   </div> 
   <div>
     <span className="footer-title">Legal</span> 
